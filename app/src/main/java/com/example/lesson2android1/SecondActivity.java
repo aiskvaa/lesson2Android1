@@ -43,8 +43,6 @@ public class SecondActivity extends AppCompatActivity {
         imImageGallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA_SECURE);
-                startActivity(intent);
                 resultLauncher.launch("image/*");
             }
         });
@@ -59,7 +57,7 @@ public class SecondActivity extends AppCompatActivity {
 
             }
         });
-        
+
     }
 
     ActivityResultLauncher<String> resultLauncher = registerForActivityResult(
